@@ -1,0 +1,11 @@
+<h2>Stream Writeable</h2>
+
+<ul>
+<li><b>chunk</b> sono i dati che devono essere scritti</li>
+<li><b>enc</b> è lo string encoding, ma solo se <b>opts.decodeStrings</b> è false è stata scritta una stringa</li>
+<li><b>next(err)</b> è il callback che dice che il chunk è stato processato.
+<li>Se lo stream readeable manda dellle string, queste sono convertite in Buffer
+    a meno che lo stream non sia creato con <b>Writable({ decodeStrings: false })</b>.
+</li>
+
+</ul>

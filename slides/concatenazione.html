@@ -1,0 +1,17 @@
+<h2>Concatenazione</h2>
+
+<p>pipe ritorna uno stream readeable, quindi è possibile la concatenazione:</p>
+
+<pre><code data-trim>
+a.pipe(b).pipe(c).pipe(d)
+</code></pre>
+
+<p>...che è uguale a:</p>
+
+<pre><code data-trim>
+a.pipe(b);
+b.pipe(c);
+c.pipe(d);
+</code></pre>
+
+<p>...ovvero: a | b | c | d </p>

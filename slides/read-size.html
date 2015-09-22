@@ -1,0 +1,22 @@
+<h2>_read(size)</h2>
+
+<ul>
+    <li>Gli Stream Readeable sono implementati subclassando <b>stream.Readable</b>
+        (o estendendo un Readeable object) e
+        implementando<b>_read(size)</b>.</li>
+    <li>size in bytes, ma può esssere ignorato (objectMode)</li>
+    <li>_read(size) deve chiamare <b>this.push(chunk)</b> per mandare un chunk al consumer</li>
+</ul>
+
+<pre><code data-trim>
+var Readable = require('stream').Readable;
+var rs = Readable();
+
+var c = 97;
+rs._read = function () {
+    rs.push(String.fromCharCode(c++));
+    if (c > 'z'.charCodeAt(0)) rs.push(null);
+};
+
+rs.pipe(process.stdout);
+</code></pre>

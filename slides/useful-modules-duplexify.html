@@ -1,0 +1,29 @@
+<h2>Useful Modules: duplexify</h2>
+
+<ul>
+<li>
+<a href="https://github.com/mafintosh/duplexify">https://github.com/mafintosh/duplexify</a>
+</li>
+<li>Turn a writeable and readable stream into a single duplex</li>
+</ul>
+
+<pre><code data-trim>
+var duplexify = require('duplexify')
+var http = require('http')
+
+var createRequest = function(opts) {
+  var req = http.request(opts)
+  var dup = duplexify(req)
+  req.on('response', function(res) { 
+    dup.setReadable(res) // Specifico che ora leggo da "res"
+  })
+  return dup;
+}
+
+// Creo il duplex, la request è writeable e la response è readeable
+var req = createRequest({method: 'POST',host: 'localhost', port:8000});
+
+// Collego sdin e stdout a request e response
+process.stdin.pipe(req).pipe(process.stdout);
+
+</pre></code data-trim>

@@ -1,0 +1,14 @@
+<h2>Zipping a file: the stream way</h2>
+
+<pre><code data-trim>
+var fs = require('fs');
+var zlib = require('zlib');
+var file = process.argv[2];
+
+fs.createReadStream(file)
+    .pipe(zlib.createGzip())
+    .pipe(fs.createWriteStream(file + '.stream.gz'))
+        .on('finish', function() {
+            console.log('File successfully compressed');
+    });
+</code></pre>

@@ -1,0 +1,15 @@
+<h2>Stream Writeable - 3</h2>
+
+<p>Per scrivere (direttamente) su on stream writeable, basta <b>.write(data)</b>.</p>
+<p>Per informare che si è terminato di scrivere, usare <b>.end()</b> (o <b>.end(data)</b>).
+
+<pre><code data-trim>
+var fs = require('fs');
+var ws = fs.createWriteStream('message.txt');
+
+ws.write('beep ');
+
+setTimeout(function () {
+    ws.end('boop\n');
+}, 1000);
+</pre></code data-trim>

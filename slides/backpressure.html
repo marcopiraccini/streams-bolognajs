@@ -1,0 +1,14 @@
+<h2>Backpressure</h2>
+
+<ul>
+<li>
+E' possibile avere negli stream dei bottleneck (i dati arrivano troppo velocemente). Per ovviare
+a questo gli stream bufferizzano, ma in certe situazioni questo può portare
+ad un uso eccessivo della memoria.
+</li>
+
+<li>Per prevenire questo, <b>writable.write()</b> ritorna <b>false</b> quando il
+la dimensione del buffer eccede <b>highWaterMark</b> (Default=16kb, or 16 per objectMode streams)</li>
+
+<li>Quando il buffer è vuoto, viene emesso l'evento <b>drain</b></li>
+</ul>

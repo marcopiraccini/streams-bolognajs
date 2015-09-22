@@ -1,0 +1,24 @@
+<h2>Useful Modules: pumpify</h2>
+
+<ul>
+<li>
+<a href="https://github.com/mafintosh/pumpify">https://github.com/mafintosh/pumpify</a>
+</li>
+
+<li>Combina un array di streams in un  singolo duplex streams (usa <b>pump</b> e
+<b>duplexify</b>). Se uno degli stream della pipeline viene chiuso o genera errore,
+tutti gli streams della pipeline vengono distrutti.</li>
+</ul>
+
+<pre><code data-trim>
+var pumpify = require('pumpify')
+var tar = require('tar-fs')
+var zlib = require('zlib')
+var fs = require('fs')
+
+var untar = pumpify(zlib.createGunzip(), tar.extract('output-folder'))
+// you can also pass an array instead
+// var untar = pumpify([zlib.createGunzip(), tar.extract('output-folder')])
+
+fs.createReadStream('some-gzipped-tarball.tgz').pipe(untar)
+</pre></code data-trim>

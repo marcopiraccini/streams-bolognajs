@@ -1,0 +1,21 @@
+<h2>Stream Writeable</h2>
+
+<ul>
+<li>Subclass di stream.Writable (o estensione un Writeable object)</li>
+<li>Implementa <b>_write(chunk, encoding, callback)</b>.</li>
+</ul>
+
+<pre><code data-trim>
+var Writable = require('stream').Writable;
+var ws = Writable();
+ws._write = function (chunk, enc, next) {
+    console.log(chunk);
+    next();
+};
+
+process.stdin.pipe(ws);
+</code></pre>
+
+<pre><code data-trim>
+(echo hello; sleep 1; echo world) | node write0.js
+</pre></code data-trim>

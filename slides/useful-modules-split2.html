@@ -1,0 +1,18 @@
+<h2>Useful Modules: split2</h2>
+
+<ul>
+<li>
+<a href="https://github.com/mcollina/split2">https://github.com/mcollina/split2
+</a>
+</li>
+
+<li>Ricombina un stream in modo che ogni chunk sia una linea.</li>
+</ul>
+
+<pre><code data-trim>
+fs.createReadStream(file)
+    .pipe(split2())
+    .on('data', function (line) {
+        //each chunk now is a seperate line!
+})
+</pre></code data-trim>

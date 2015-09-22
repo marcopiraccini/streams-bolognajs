@@ -1,0 +1,22 @@
+<h2>Useful Modules: concat-stream</h2>
+
+<ul>
+<li>
+<a href="https://github.com/maxogden/concat-stream">https://github.com/maxogden/concat-stream</a>
+</li>
+<li>Writable stream he concatena i dati e chiama un callback con i risultati
+    (assicurarsi di avere memoria sufficiente).</li>
+</ul>
+
+<pre><code data-trim>
+var fs = require('fs');
+var concat = require('concat-stream');
+var readStream = fs.createReadStream('cat.png');
+var concatStream = concat(gotPicture);
+
+readStream.pipe(concatStream);
+
+function gotPicture(imageBuffer) {
+    // imageBuffer is all of `cat.png` as a node.js Buffer
+}
+</pre></code data-trim>

@@ -1,0 +1,15 @@
+<h2>How it Works</h2>
+
+<ul>
+<li>
+Il setTimeout è necessario perchè il sistema operativo richiede del tempo
+per mandare il sengale di chiusura della pipe.</li>
+<li>
+Anche <b>process.stdout.on('error', fn)</b> è necessario perchè il sistema manda una SIGPIPE
+per comunicare che non è più interessato all'output del programma, che produce un errore
+EPIPE emesso da process.stdout
+</li>
+<li>
+Queste complicazioni non sono necessarie se non interagiamo con il file system esterno.
+</li>
+</ul>

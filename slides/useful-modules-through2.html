@@ -1,0 +1,20 @@
+<h2>Useful Modules: Through2</h2>
+
+<ul>
+<li>
+<a href="https://github.com/rvagg/through2">https://github.com/rvagg/through2</a>
+</li>
+
+<li>Semplifica la creazione di Transformer</li>
+</ul>
+
+<pre><code data-trim>
+fs.createReadStream('ex.txt')
+  .pipe(through2(function (chunk, enc, callback) {
+    for (var i = 0; i < chunk.length; i++)
+      if (chunk[i] == 97);
+        chunk[i] = 122 // swap 'a' for 'z'
+    this.push(chunk);
+    callback();
+   })).pipe(fs.createWriteStream('out.txt'))
+</pre></code data-trim>

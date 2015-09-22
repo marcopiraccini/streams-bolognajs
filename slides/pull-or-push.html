@@ -1,0 +1,20 @@
+<h2>Pull o Push?</h2>
+
+<ul>
+<li>
+Stream 1 (node >= 0.8): “push” i reader producono dati quando vogliono, generando un evento “data”.
+I consumer possono utilizzare pause() and resume().
+</li>
+
+<li>
+Stream 2 (node >= 0.10): “pull”  (modalità “non-flowing”)
+Il consumer può controllare il flusso dei dati usando <b>stream.read()</b> quando notificato
+di dati disponibili (evento <b>readeable</b>). In questa modalità, gli streams partono sempre in stato "paused".
+La versione vecchia è supportata (modalità "flowing"), ma non è possibile avere push e pull allo stesso tempo.
+</li>
+
+<li>
+Stream 3 (io.js > 1.0.1): si possono usare i due modi insieme.
+</li>
+
+</ul>

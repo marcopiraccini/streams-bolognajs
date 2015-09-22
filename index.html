@@ -1,0 +1,396 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+
+        <title>NodeJS Streams - a quick introduction</title>
+
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+        <link rel="stylesheet" href="bower_components/reveal.js/css/reveal.css">
+    
+        <link rel="stylesheet" href="bower_components/reveal.js/css/theme/white.css" id="theme">
+    
+
+        <!-- For syntax highlighting -->
+        <link rel="stylesheet" href="bower_components/highlightjs/styles/zenburn.css">
+
+        <!-- Printing and PDF exports -->
+        <script>
+            var link = document.createElement( 'link' );
+            link.rel = 'stylesheet';
+            link.type = 'text/css';
+            link.href = window.location.search.match( /print-pdf/gi ) ? 'bower_components/reveal.js/css/print/pdf.css' : 'bower_components/reveal.js/css/print/paper.css';
+            document.getElementsByTagName( 'head' )[0].appendChild( link );
+        </script>
+
+        <!--[if lt IE 9]>
+        <script src="bower_components/reveal.js/lib/js/html5shiv.js"></script>
+        <![endif]-->
+    </head>
+
+    <body>
+
+        <div class="reveal">
+
+            <div class="slides">
+
+                
+                    
+                        
+    <section data-html="slides/index.html"></section>
+
+
+                    
+                    
+                
+                    
+                        
+    <section data-html="slides/streams-are-easy.html"></section>
+
+
+                    
+                    
+                
+                    
+                        
+    <section data-html="slides/unix-philosophy-1.html"></section>
+
+
+                    
+                    
+                
+                    
+                        
+    <section data-html="slides/unix-philosophy-2.html"></section>
+
+
+                    
+                    
+                
+                    
+                        
+    <section data-html="slides/unix-philosophy-3.html"></section>
+
+
+                    
+                    
+                
+                    
+                        
+    <section data-html="slides/node-streams-1.html"></section>
+
+
+                    
+                    
+                
+                    
+                        
+    <section data-html="slides/node-streams-2.html"></section>
+
+
+                    
+                    
+                
+                    
+                        
+    <section data-html="slides/buffering-vs-streaming.html"></section>
+
+
+                    
+                    
+                
+                    
+                        
+    <section data-html="slides/zipping-a-file-the-buffer-way.html"></section>
+
+
+                    
+                    
+                
+                    
+                        
+    <section data-html="slides/now-with-a-bigger-file.html"></section>
+
+
+                    
+                    
+                
+                    
+                        
+    <section data-html="slides/zipping-a-file-the-streams-way.html"></section>
+
+
+                    
+                    
+                
+                    
+                        
+    <section data-html="slides/e-tutto-qui.html"></section>
+
+
+                    
+                    
+                
+                    
+                        
+    <section data-html="slides/tipi-di-stream.html"></section>
+
+
+                    
+                    
+                
+                    
+                        
+    <section data-html="slides/concatenazione.html"></section>
+
+
+                    
+                    
+                
+                    
+                        
+    <section data-html="slides/come-puo-funzionare.html"></section>
+
+
+                    
+                    
+                
+                    
+                        
+    <section data-html="slides/nodestreams-com.html"></section>
+
+
+                    
+                    
+                
+                    
+                        
+    <section data-html="slides/stream-readeable.html"></section>
+
+
+                    
+                    
+                
+                    
+                        
+    <section data-html="slides/read-size.html"></section>
+
+
+                    
+                    
+                
+                    
+                        
+    <section data-html="slides/readeable-example.html"></section>
+
+
+                    
+                    
+                
+                    
+                        
+    <section data-html="slides/pull-or-push.html"></section>
+
+
+                    
+                    
+                
+                    
+                        
+    <section data-html="slides/readeable-example-how-it-works.html"></section>
+
+
+                    
+                    
+                
+                    
+                        
+    <section data-html="slides/stream-writeable-1.html"></section>
+
+
+                    
+                    
+                
+                    
+                        
+    <section data-html="slides/stream-writeable-2.html"></section>
+
+
+                    
+                    
+                
+                    
+                        
+    <section data-html="slides/stream-writeable-3.html"></section>
+
+
+                    
+                    
+                
+                    
+                        
+    <section data-html="slides/stream-writeable-4.html"></section>
+
+
+                    
+                    
+                
+                    
+                        
+    <section data-html="slides/backpressure.html"></section>
+
+
+                    
+                    
+                
+                    
+                        
+    <section data-html="slides/transform-and-duplex.html"></section>
+
+
+                    
+                    
+                
+                    
+                        
+    <section data-html="slides/transform.html"></section>
+
+
+                    
+                    
+                
+                    
+                        
+    <section data-html="slides/transform-example.html"></section>
+
+
+                    
+                    
+                
+                    
+                        
+    <section data-html="slides/object-mode.html"></section>
+
+
+                    
+                    
+                
+                    
+                        
+    <section data-html="slides/useful-modules-through2.html"></section>
+
+
+                    
+                    
+                
+                    
+                        
+    <section data-html="slides/useful-modules-end-of-stream.html"></section>
+
+
+                    
+                    
+                
+                    
+                        
+    <section data-html="slides/useful-modules-duplexify.html"></section>
+
+
+                    
+                    
+                
+                    
+                        
+    <section data-html="slides/useful-modules-pumpify.html"></section>
+
+
+                    
+                    
+                
+                    
+                        
+    <section data-html="slides/useful-modules-split2.html"></section>
+
+
+                    
+                    
+                
+                    
+                        
+    <section data-html="slides/useful-modules-split2-example.html"></section>
+
+
+                    
+                    
+                
+                    
+                        
+    <section data-html="slides/useful-modules-concat-stream.html"></section>
+
+
+                    
+                    
+                
+                    
+                        
+    <section data-html="slides/useful-modules-websocket-stream.html"></section>
+
+
+                    
+                    
+                
+                    
+                        
+    <section data-html="slides/fonti.html"></section>
+
+
+                    
+                    
+                
+                    
+                        
+    <section data-html="slides/grazie.html"></section>
+
+
+                    
+                    
+                
+            </div>
+
+        </div>
+
+        <script src="bower_components/reveal.js/lib/js/head.min.js"></script>
+        <script src="bower_components/reveal.js/js/reveal.js"></script>
+        <script>
+
+          // Full list of configuration options available at:
+          // https://github.com/hakimel/reveal.js#configuration
+          Reveal.initialize({
+            controls: true,
+            progress: true,
+            history: true,
+            center: true,
+
+            transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+            // Optional reveal.js plugins
+            dependencies: [
+              { src: 'bower_components/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+              { src: 'bower_components/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+              { src: 'bower_components/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+              { src: 'bower_components/reveal.js/plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( '[data-html]' ) || !!document.querySelector( 'pre code' ) || !!document.querySelector( '[data-markdown]' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+              { src: 'bower_components/reveal.js/plugin/zoom-js/zoom.js', async: true },
+              { src: 'bower_components/reveal.js/plugin/notes/notes.js', async: true },
+              { src: 'js/loadhtmlslides.js', condition: function() { return !!document.querySelector( '[data-html]' ); } }
+            ]
+          });
+
+        </script>
+    </body>
+
+</html>
